@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/robo-cats/static/css/main.e03c8a3c.css",
+    "main.js": "/robo-cats/static/js/main.bfd55828.js",
+    "static/js/787.32032a02.chunk.js": "/robo-cats/static/js/787.32032a02.chunk.js",
+    "index.html": "/robo-cats/index.html",
+    "main.e03c8a3c.css.map": "/robo-cats/static/css/main.e03c8a3c.css.map",
+    "main.bfd55828.js.map": "/robo-cats/static/js/main.bfd55828.js.map",
+    "787.32032a02.chunk.js.map": "/robo-cats/static/js/787.32032a02.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e03c8a3c.css",
+    "static/js/main.bfd55828.js"
+  ]
+}
