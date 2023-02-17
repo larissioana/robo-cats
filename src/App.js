@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import Card from './components/Card';
+import { robots } from './robots';
+import SearchBar from './components/Searchbar';
+import './index.css';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+ const [search,setSearch]=useState('');
+ const onChangeHandler=(e)=>{
+  setSearch(e.target.value)
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="tc">
+      <h1>RoboCats</h1>
+      <SearchBar onChangeHandler={onChangeHandler}/>
+     
+      {robots.filter((robot)=>{
+        return search.toLowerCase()===''? robot :robot.name.toLowerCase().includes(search)
+     })
+     .map((robot)=>{
+        const{id,name,email,username}=robot
+        return (
+        <Card name={name} email={email} username={username} key={id} id={id}
+        />
+        )
+      })}
+  </div>
   );
 }
 
